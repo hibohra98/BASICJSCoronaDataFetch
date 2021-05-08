@@ -161,6 +161,8 @@ $(document).ready(function(){
             <p>Confirmed Cases in last 24hrs:  ${objkey.today.confirmed}</p>
             <p>Deaths in last 24hrs:  ${objkey.today.deaths}</p>
             <p>Population Name:  ${objkey.population}</p>
+            </ul>
+            <hr>
             `
             console.log(html);
             document
