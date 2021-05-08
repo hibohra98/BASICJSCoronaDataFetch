@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <title>Corona Cases Data</title>
+        <style>
+            body {
+                min-width: 820px;
+            }
+            #player {
+                margin: auto;
+                height: 20px;
+            }
+            #container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;  
+            }
+            #container * {
+                margin: 10px;
+            }
+            .footer-menu {
+                margin: auto;
+            }
+            
+        </style>
+    </head>
+  <body class="sb-nav-fixed">
+ 
+    <section name="header">
+        <div class="ui inverted menu">
+            <a class="item">
+            <img src="https://ec.europa.eu/programmes/creative-europe/sites/default/files/covid19-cdc-unsplash.jpg"/> Corona Cases
+            </a>
+            <a class="item" target="_blank" href="">
+            <i class="github icon"></i> Star on GitHub
+            </a>
+            <audio controls autoplay loop id="player">
+                <source src="./background_music.webm">
+            </audio>
+        </div>
+    </section>
+    
+    <div id="app"></div>
+       
+    <section name="canvas">
+        <div class="ui placeholder segment">
+            <canvas id="app" width="800" height="600" style="display:block;margin:0 auto"></canvas>
+        </div>
+    </section>
+  
+  </body>
+  <script src='index.js' defer></script>
+</html>
