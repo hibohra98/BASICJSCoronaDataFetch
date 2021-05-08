@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- 
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <style>
             body {
                 min-width: 820px;
@@ -37,12 +37,11 @@
             } */
             
         </style>
-    </head>
-  <body class="sb-nav-fixed">
- 
-    <section name="header"">
-        <div class="ui inverted menu" style = "position: fixed; width: 100%; top:0 ;">
-            <a class="item" >
+    </head>  
+<body>
+       <section name="header">
+        <div class="ui inverted menu" >
+            <a class="item">
             <img src="https://ec.europa.eu/programmes/creative-europe/sites/default/files/covid19-cdc-unsplash.jpg"/> Corona Cases
             </a>
             <a class="item" target="_blank" href="">
@@ -53,21 +52,18 @@
             </audio>
         </div>
     </section> 
-
-    <div class="container">
+        <div class="container">
         <div class="row">
           <div class="col-sm-6">
-             <div id="GetCountry"></div>
-            <div id="app1"></div>
             <button id="APICALL">Cache Me!</button>
             <button id="submit" style="padding:6px 18px; background-color:#4CAF50; border:none; border-radius:12px; margin:6px;">Submit to call API</button>
+            <div id="GetCountry"></div>
+            <div id="app1"></div>
         </div>
           <div class="col-sm-6">
             <!-- Helloi -->
             <iframe src="https://ourworldindata.org/grapher/covid-confirmed-cases-since-100th-case?country=USA+ESP+ITA+KOR+TWN+GBR+NOR" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-           <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe>
-             
-           
+           <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe> 
            
           </div>
         </div>
@@ -78,3 +74,33 @@
   <script src='index.js' ></script>
   <script src='separate.js' ></script>
 </html>
+
+
+
+    <!-- <section name="header">
+        <div class="ui inverted menu" >
+            <a class="item">
+            <img src="https://ec.europa.eu/programmes/creative-europe/sites/default/files/covid19-cdc-unsplash.jpg"/> Corona Cases
+            </a>
+            <a class="item" target="_blank" href="">
+            <i class="github icon"></i> Star on GitHub
+            </a>
+            <audio controls autoplay loop id="player">
+                <source src="./background_music.webm">
+            </audio>
+        </div>
+    </section>  -->
+
+    <!-- <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Corona Cases</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </div>
+      </nav> -->
