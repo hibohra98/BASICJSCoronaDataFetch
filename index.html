@@ -7,7 +7,11 @@
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-        <title>Chaos Game by rachitiitr</title>
+        <title>--</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
         <style>
             body {
                 min-width: 820px;
@@ -48,11 +52,29 @@
                 <source src="./background_music.webm">
             </audio>
         </div>
-    </section>        
-    <div id="app"></div>
-    <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe>
+    </section> 
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+             <div id="GetCountry"></div>
+            <div id="app1"></div>
+            <button id="APICALL">Cache Me!</button>
+            <button id="submit" style="padding:6px 18px; background-color:#4CAF50; border:none; border-radius:12px; margin:6px;">Submit to call API</button>
+        </div>
+          <div class="col-sm-6">
+            <!-- Helloi -->
+            <iframe src="https://ourworldindata.org/grapher/covid-confirmed-cases-since-100th-case?country=USA+ESP+ITA+KOR+TWN+GBR+NOR" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+           <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe>
+             
+           
+           
+          </div>
+        </div>
+    </div>
 
   
   </body>
-  <script src='index.js' defer></script>
+  <script src='index.js' ></script>
+  <script src='separate.js' ></script>
 </html>
