@@ -115,7 +115,8 @@ function fetchData2(){
             
             cachedata = data.data;
           
-            var html = `  <select class="form-select    " style="width:100%" id="selectedcountry" aria-label="Default select example">`
+//             var html = `  <select class="form-select    " style="width:100%" id="selectedcountry" aria-label="Default select example">`
+            var html = `<select class="form-select" style="height: 40px; width:100%; border-radius:21px;" id="selectedcountry" aria-label="Default select example">`
             var temp = data.data.map(record => {
                 return `${record.name}`
             });
