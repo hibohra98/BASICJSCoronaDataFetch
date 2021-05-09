@@ -115,7 +115,8 @@ function fetchData2(){
             
             cachedata = data.data;
           
-            var html = `  <select class="form-select    " style="width:100%" id="selectedcountry" aria-label="Default select example">`
+//             var html = `  <select class="form-select    " style="width:100%" id="selectedcountry" aria-label="Default select example">`
+            var html = `<select class="form-select" style="height: 40px; width:100%; border-radius:21px;" id="selectedcountry" aria-label="Default select example">`
             var temp = data.data.map(record => {
                 return `${record.name}`
             });
@@ -131,6 +132,7 @@ function fetchData2(){
              document
              .querySelector("#GetCountry")
              .insertAdjacentHTML('afterbegin', html)
+
     
        })
        .catch( error => {
@@ -150,21 +152,58 @@ $(document).ready(function(){
                     }
             }
             console.log(objkey);
+
+            var html = 
+            `<table>
+                <tr>
+                    <td style="height:35px;">Country Name:</td><td>${objkey.name}</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Population:</td><td>${objkey.population}</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Total Confirmed:</td><td>${objkey.latest_data.confirmed} </td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Total Recovered:</td><td>${objkey.latest_data.recovered}</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Total Death:</td><td>${objkey.latest_data.deaths}</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Confirmed Cases in last 24hrs:</td><td>${objkey.today.confirmed}</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Deaths in last 24hrs:</td><td>${objkey.today.deaths}</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Recovery Rate:</td><td>${objkey.latest_data.calculated.recovery_rate} %</td>
+                </tr>
+                <tr>
+                    <td style="height:35px;">Death Rate:</td><td>${objkey.latest_data.calculated.death_rate} %</td>
+                </tr>
+            </table>
+            <hr>`
             
-            var html = ` <ul> 
-            <p>Country Name:  ${objkey.name}</p>
-            <p>Total Confirmed: ${objkey.latest_data.confirmed} </p>
-            <p>Recovered:  ${objkey.latest_data.recovered}</p>
-            <p>Total Death:  ${objkey.latest_data.deaths}</p>
-            <p>Death Rate:  ${objkey.latest_data.calculated.death_rate}</p>
-            <p>Recovery Rate:  ${objkey.latest_data.calculated.recovery_rate}</p>
-            <p>Confirmed Cases in last 24hrs:  ${objkey.today.confirmed}</p>
-            <p>Deaths in last 24hrs:  ${objkey.today.deaths}</p>
-            <p>Population Name:  ${objkey.population}</p>
-            </ul>
-            <hr>
-            `
+            // var html = ` <ul> 
+            // <p>Country Name:  ${objkey.name}</p>
+            // <p>Total Confirmed: ${objkey.latest_data.confirmed} </p>
+            // <p>Recovered:  ${objkey.latest_data.recovered}</p>
+            // <p>Total Death:  ${objkey.latest_data.deaths}</p>
+            // <p>Death Rate:  ${objkey.latest_data.calculated.death_rate}</p>
+            // <p>Recovery Rate:  ${objkey.latest_data.calculated.recovery_rate}</p>
+            // <p>Confirmed Cases in last 24hrs:  ${objkey.today.confirmed}</p>
+            // <p>Deaths in last 24hrs:  ${objkey.today.deaths}</p>
+            // <p>Population Name:  ${objkey.population}</p>
+            // </ul>
+            // <hr>
+            // `
             console.log(html);
+
+            //added for clearing existing data 
+                $("#app1").empty();
+            //end
+            
             document
             .querySelector("#app1")
             .insertAdjacentHTML('afterbegin', html) 
