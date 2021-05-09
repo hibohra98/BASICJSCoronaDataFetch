@@ -171,10 +171,10 @@ $(document).ready(function(){
                     <td style="height:35px;">Total Death:</td><td>${objkey.latest_data.deaths}</td>
                 </tr>
                 <tr>
-                    <td style="height:35px;">Confirmed Cases in last 24hrs:</td><td>${objkey.today.confirmed}</td>
+                    <td style="height:35px;">Confirmed Cases in last 15 minutes:</td><td>${objkey.today.confirmed}</td>
                 </tr>
                 <tr>
-                    <td style="height:35px;">Deaths in last 24hrs:</td><td>${objkey.today.deaths}</td>
+                    <td style="height:35px;">Deaths in last 15 minutes:</td><td>${objkey.today.deaths}</td>
                 </tr>
                 <tr>
                     <td style="height:35px;">Recovery Rate:</td><td>${objkey.latest_data.calculated.recovery_rate} %</td>
